@@ -1,0 +1,30 @@
+The problem is: How can we read 10 million names without crashing or freezing the browser?
+
+We will try to apply infinite scroll, meaning we won't load all the names at once but will load them when the user scrolls to the bottom. This functionality is similar to scrolling on Facebook, Instagram, or YouTube.
+
+We are going to use FastAPI to create an API that contains our data (names) and defines an endpoint at "http://127.0.0.1:8000/names/?limit=${page}".
+
+We will use JavaScript to fetch the data from the endpoint we created and then display it on our web page.
+
+The menu will function once the user browses the names starting with a letter in the menu.
+
+We'll use the file names.txt as a test because it has a few names with different letters that you can browse easily.
+
+Some things that I couldn't do:
+
+I couldn't figure out how to display letters like this:
+
+A
+
+Aaron Abbott
+Aaron Abernathy
+B
+
+Benjamin Connelly
+Benjamin Conroy III
+Benjamin Conroy Jr.
+To run the application:
+
+First, run pip install -r requirements.txt.
+Second, run the server with Uvicorn: uvicorn main:app --reload.
+Third, use the Go live (live server) on Vscode that will take to "http://127.0.0.1:5500/" on your browser or go to index.html
